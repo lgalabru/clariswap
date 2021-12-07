@@ -1,0 +1,71 @@
+[network]
+name = "devnet"
+deployment_fee_rate = 10
+
+[accounts.deployer]
+mnemonic = "twice kind fence tip hidden tilt action fragile skin nothing glory cousin green tomorrow spring wrist shed math olympic multiply hip blue scout claw"
+balance = 100_000_000_000_000
+# secret_key: 753b7cc01a1a2e86221266a154af739463fce51219d97e4f856cd7200c3bd2a601
+# stx_address: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+# btc_address: mqVnk6NPRdhntvfm4hh9vvjiRkFDUuSYsH
+
+[accounts.ludo]
+mnemonic = "sell invite acquire kitten bamboo drastic jelly vivid peace spawn twice guilt pave pen trash pretty park cube fragile unaware remain midnight betray rebuild"
+balance = 100_000_000_000_000
+# secret_key: 7287ba251d44a4d3fd9276c88ce34c5c52a038955511cccaf77e61068649c17801
+# stx_address: ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5
+# btc_address: mr1iPkD9N3RJZZxXRk7xF9d36gffa6exNC
+
+[devnet]
+disable_bitcoin_explorer = true
+# disable_stacks_explorer = true
+# disable_stacks_api = true
+# working_dir = "tmp/devnet"
+# stacks_node_events_observers = ["host.docker.internal:8002"]
+# miner_mnemonic = "twice kind fence tip hidden tilt action fragile skin nothing glory cousin green tomorrow spring wrist shed math olympic multiply hip blue scout claw"
+# miner_derivation_path = "m/44'/5757'/0'/0/0"
+# orchestrator_port = 20445
+# bitcoin_node_p2p_port = 18444
+# bitcoin_node_rpc_port = 18443
+# bitcoin_node_username = "devnet"
+# bitcoin_node_password = "devnet"
+# bitcoin_controller_port = 18442
+# bitcoin_controller_block_time = 30_000
+# stacks_node_rpc_port = 20443
+# stacks_node_p2p_port = 20444
+# stacks_api_port = 3999
+# stacks_api_events_port = 3700
+# bitcoin_explorer_port = 8001
+# stacks_explorer_port = 8000
+# postgres_port = 5432
+# postgres_username = "postgres"
+# postgres_password = "postgres"
+# postgres_database = "postgres"
+# bitcoin_node_image_url = "quay.io/hirosystems/bitcoind:devnet"
+# stacks_node_image_url = "localhost:5000/stacks-node:devnet"
+# stacks_api_image_url = "blockstack/stacks-blockchain-api:latest"
+# stacks_explorer_image_url = "blockstack/explorer:latest"
+# bitcoin_explorer_image_url = "quay.io/hirosystems/bitcoin-explorer:devnet"
+# postgres_image_url = "postgres:alpine"
+
+# Send some stacking orders
+[[devnet.pox_stacking_orders]]
+start_at_cycle = 3
+duration = 12
+wallet = "wallet_1"
+slots = 2
+btc_address = "mr1iPkD9N3RJZZxXRk7xF9d36gffa6exNC"
+
+[[devnet.pox_stacking_orders]]
+start_at_cycle = 3
+duration = 12
+wallet = "wallet_2"
+slots = 1
+btc_address = "muYdXKmX9bByAueDe6KFfHd5Ff1gdN9ErG"
+
+[[devnet.pox_stacking_orders]]
+start_at_cycle = 3
+duration = 12
+wallet = "wallet_3"
+slots = 1
+btc_address = "mvZtbibDAAA3WLpY7zXXFqRa3T4XSknBX7"
